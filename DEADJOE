@@ -1,0 +1,15 @@
+
+*** These modified files were found in JOE when it aborted on Sun Oct 16 18:21:50 2016
+*** JOE was aborted by UNIX signal 1
+
+*** File '/var/www/wp-content/uploads/civicrm/ext/org.civicirm.angular/.git/MERGE_MSG'
+Merge branch 'master' of https://github.com/ameerhamza26/civi-ang-membership-extension
+
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
+
+*** File '(Unnamed)'
+/var/www/wp-content/uploads/civicrm/ext/org.civicirm.angular/.git/MERGE_MSG
