@@ -1,0 +1,63 @@
+<div class="crm-container">
+  <div crm-ui-debug="myContact"></div>
+
+  <form name="myForm" crm-ui-id-scope>
+
+
+
+    <div crm-ui-accordion="{title: ts('Current Memberships')}">
+      <div class="crm-block">
+        <div class="crm-group">
+          <div crm-ui-field="{name: 'date.start_date', title: ts('Start Date')}">
+            <input type="date" 
+              ng-model="date.start_date"
+              class="crm-form-text"
+              />
+	  </div>
+          <div crm-ui-field="{name: 'date.end_date', title: ts('End Date')}">	
+            <input type="date"
+              ng-model="date.end_date"
+              class="crm-form-text"
+              />
+          </div>
+        </div>
+      </div>
+
+    <div ng-if="error" class="error">
+      <p>{{ts(error)}}</p>
+    </div>
+      
+      <div>
+        <button ng-click="search()" class="crm-form-submit default">{{ts('Search')}}</button>
+      </div>
+
+
+      <div id="memberSearch" class="crm-search-results" style="padding: 10px 10px 10px 10px;">
+            <table class="selector row-highlight" style="position:relative;">
+	      <thead class="sticky">
+                 <tr>
+                    <th>Name</th>
+		    <th>Contact Type</th>
+	            <th>Membership Type</th>
+		    <th>Start Date</th>
+	     	    <th>End Date</th> 		
+	         </tr>
+              </thead>
+		<tbody>
+			<tr ng-repeat="mem in memberships">
+				<td>{{mem.contact.display_name}}</td>
+				<td>{{mem.contact.contact_type}}</td>
+				<td>{{mem.membership.membership_name}}</td>
+				<td>{{mem.membership.start_date}}</td>
+				<td>{{mem.membership.end_date}}</td>
+			</tr>
+		</tbody>
+            </table>
+      </div>      
+
+
+    </div>
+
+  </form>
+
+</div>
